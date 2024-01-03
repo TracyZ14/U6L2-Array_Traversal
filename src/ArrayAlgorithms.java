@@ -1,0 +1,103 @@
+public class ArrayAlgorithms
+{
+    /**
+     * Prints each String in wordList, on its own line, followed by “!”.
+     * Does NOT mutate (modify) wordList.
+     * PRECONDITION: wordList.length > 0
+     *
+     * @param wordList original array of Strings; does not get modified
+     */
+    public static void printExclamation(String[] wordList)
+    {
+        for(int i = 0; i < wordList.length; i++)
+        {
+            System.out.println(wordList[i] + "!");
+        }
+    }
+
+    /** Adds a “!” to the end of each String in wordList (does not print).
+     *  DOES mutate (modify) original wordList.
+     *  PRECONDITION: wordList.length > 0
+     *
+     *  @param wordList  original array of Strings, modified by method
+     */
+    public static void addExclamation(String[] wordList)
+    {
+        for(int i = 0; i < wordList.length; i++)
+        {
+            wordList[i] = wordList[i] + "!";
+        }
+    }
+
+    /** Returns the sum of all values in numList.
+     *  Does NOT mutate (modify) numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  array of integers to find sum
+     *  @return  the sum of all numbers in the list
+     */
+    public static int sum(int[] numList)
+    {
+        int sum = 0;
+        for(int i = 0; i < numList.length; i++)
+        {
+            sum = sum + numList[i];
+        }
+        return sum;
+    }
+
+    /** Returns the average of all values in numList, as a double.
+     *  Does NOT mutate (modify) numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  array of integers to find average
+     *  @return  the average of all numbers in the list
+     *
+     *  Use your sum method for this! (don’t rewrite that logic!)
+     */
+    public static double average(int[] numList)
+    {
+        double average = (double) sum(numList) / numList.length;
+        return average;
+    }
+
+    /** Returns the value in numList that represents the minimum value in numList.
+     *  Does NOT mutate (modify) numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  array of integers to find minimum
+     *  @return  the minimum value in the array
+     */
+    public static int minimum(int[] numList)
+    {
+        int minimum = numList[0];
+        for(int i = 0; i < numList.length; i++)
+        {
+            if(numList[i] < minimum)
+            {
+                minimum = numList[i];
+            }
+        }
+        return minimum;
+    }
+
+    /** Returns the value in numList that represents the maximum value in numList.
+     *  Does NOT mutate (modify) numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  array of integers to find maximum
+     *  @return  the maximum value in the array
+     */
+    public static int maximum(int[] numList)
+    {
+        int maximum = numList[0];
+        for(int i = 0; i < numList.length; i++)
+        {
+            if(numList[i] > maximum)
+            {
+                maximum = numList[i];
+            }
+        }
+        return maximum;
+    }
+}
