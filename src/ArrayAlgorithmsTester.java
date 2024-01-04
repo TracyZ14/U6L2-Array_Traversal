@@ -50,5 +50,52 @@ public class ArrayAlgorithmsTester
         // original numbers lists NOT modified
         System.out.println(Arrays.toString(nums3));
         System.out.println(Arrays.toString(nums4));
+
+        System.out.println();
+
+        int[] nums5 = {6, 4, 3, 9, 2, 5};
+        int max = ArrayAlgorithms.maximum(nums5);
+        System.out.println(max);
+        int[] nums6 = {-8, -3, -7, -10};
+        int max2 = ArrayAlgorithms.maximum(nums6);
+        System.out.println(max2);
+        System.out.println("----");
+        // original numbers lists NOT modified
+        System.out.println(Arrays.toString(nums5));
+        System.out.println(Arrays.toString(nums6));
+
+        System.out.println();
+
+        int[] nums7 = {5, 10, 15, 12, 2, 6};
+        ArrayAlgorithms.multiplyBy(nums7, 6);
+        // original numbers list IS modified
+        System.out.println(Arrays.toString(nums7));
+
+        System.out.println();
+
+        int[] nums8 = {5, -10, 8, 12, 2, -6, 0};
+        int[] squares = ArrayAlgorithms.squares(nums8);
+        System.out.println(Arrays.toString(squares));
+        System.out.println("----");
+        // original numbers list NOT modified
+        System.out.println(Arrays.toString(nums8));
+
+        System.out.println();
+
+        boolean[] bools = {false, true, true, false, true};
+        ArrayAlgorithms.flipBool(bools);
+        // original boolean list IS modified
+        System.out.println(Arrays.toString(bools));
+
+        System.out.println();
+
+        int[] nums9 = {5, -10, 8, 12, 2, -6, 0};
+        System.out.println(ArrayAlgorithms.customToString(nums9));
+        int[] nums10 = {15};
+        System.out.println(ArrayAlgorithms.customToString(nums10));
+        System.out.println("----");
+        // original numbers lists NOT modified
+        System.out.println(Arrays.toString(nums9));
+        System.out.println(Arrays.toString(nums10));
     }
 }

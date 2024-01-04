@@ -100,4 +100,85 @@ public class ArrayAlgorithms
         }
         return maximum;
     }
+
+    /** Multiplies each number in numList by multiplier.
+     *  DOES mutate (modify) original numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  original array of integers, modified by method
+     *  @param multiplier  number to multiply each element in numList
+     */
+    public static void multiplyBy(int[] numList, int multiplier)
+    {
+        for(int i = 0; i < numList.length; i++)
+        {
+            numList[i] = numList[i] * multiplier;
+        }
+    }
+
+    /** Returns a NEW array containing the squares of the elements in the original
+     *  numList array, in the same position.
+     *  Does NOT mutate (modify) original numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  original array of integers to be squared
+     *  @return  new array containing squares of the values in numList
+     */
+    public static int[] squares(int[] numList)
+    {
+        int[] squares = new int[numList.length];
+        for(int i = 0; i < numList.length; i++)
+        {
+            squares[i] = numList[i] * numList[i];
+        }
+        return squares;
+    }
+
+    /** Switches each boolean value in boolList to its opposite value; true values
+     *  becomes false, and false values become true.
+     *  DOES mutate (modify) original boolList.
+     *  PRECONDITION: boolList.length > 0
+     *
+     *  @param boolList  original array of booleans, modified by method
+     */
+    public static void flipBool(boolean[] boolList)
+    {
+        for(int i = 0; i < boolList.length; i++)
+        {
+            if(boolList[i])
+            {
+                boolList[i] = false;
+            }
+            else
+            {
+                boolList[i] = true;
+            }
+        }
+    }
+
+    /** Returns a String representing the array of ints as a printable String,
+     *  including open and closing brackets, with values separated by commas.
+     *  This method should function identically to Arrays.toString()!
+
+     *  Does NOT mutate (modify) original numList.
+     *  PRECONDITION: numList.length > 0
+     *
+     *  @param numList  original array of ints to be represented in String form
+     */
+    public static String customToString(int[] numList)
+    {
+        String array = "[";
+        for(int i = 0; i < numList.length; i++)
+        {
+            if(i == (numList.length - 1))
+            {
+                array = array + numList[i] + "]";
+            }
+            else
+            {
+                array = array + numList[i] + ", ";
+            }
+        }
+        return array;
+    }
 }
